@@ -1,0 +1,396 @@
+/*common style*/
+html,body{
+	height: 100%;
+	font-family: serif,SimSun;
+}
+
+	/*background-color*/
+.bg-red {
+	background-color: red;
+}
+.bg-black {
+	background-color: #161616;
+}
+.bg-orange {
+	background-color: #E9724C;
+}
+.bg-yellow { 
+	background-color: #E3AE57;
+}
+	/*font color design*/
+.color-white {
+	color: white;
+}
+.color-black {
+	color: black;
+}
+	/*box's padding and margin design*/
+
+
+
+
+
+/*Rewrite bootstrap's style*/
+.row {
+	overflow: hidden;
+}
+.modal-footer {
+	text-align: center !important;
+}
+
+
+
+/* style design*/
+#aboutMe .about-thumb,
+#aboutMe .whsh-thumb,
+#bginfo .education-thumb,
+#bginfo .experience-thumb,
+#skill .skill-thumb {
+	padding: 20px 35px 20px 35px;
+}
+
+
+
+#aboutMe .col-md-6,#aboutMe .col-sm-6,
+#bginfo .col-md-6,#bginfo .col-sm-12,
+#contact .col-md-6,#contact .col-sm-12
+{
+	padding: 0;
+}
+
+
+
+#basicInfo,#aboutMe,#bginfo,#skills,#works,#contact{
+	position: relative;
+}
+
+#aboutMe{
+	background-color: white;
+}
+#bginfo{
+	background-color: #ffffff;
+}
+#skills{
+	background-color: #1abc9c;
+}
+#basicInfo:before,
+#aboutMe:before,
+#skills:before,
+#bginfo:before,
+#works:before,
+#contact:before{
+	display: table;
+	content: " ";
+}
+/*section:topbar*/
+.top-navbar {
+	padding: 10px 0;
+}
+.top-navbar .navbar-brand {
+	color:black;
+	font-size: 24px;
+	font-weight: 700;
+}
+.top-navbar .navbar-collapse-1 a:hover {
+	background-color: white ;
+}
+
+
+.navbar-collapse-1 a {
+	color: white;
+	font-size: 18px;
+}
+.navbar-collapse-1 a:visited,
+.navbar-collpase-1 a:active,
+.navbar-collapse-1 a:hover {
+	color: black;
+} 
+
+.top-navbar-collapse {
+	background-color: white;
+}
+.top-navbar-collapse a,
+.top-navbar-collapse .navbar-brand {
+	color: black;
+}
+
+/*section: header*/
+#head{
+	height: 100%; /* 500% */
+	background-image: url(../resource/banner.jpg);
+}
+#header:before{
+	display: tabel;
+	height: 0;
+}
+.header-wrapper{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin:200px auto auto auto;
+}
+.myimg>img{
+	box-sizing: border-box;
+	max-width: 200px;
+	
+	border:2px solid white;
+	border-radius: 50%;
+	overflow: hidden;
+
+}
+
+.otherinfo{
+	color: white;
+}
+.otherinfo h2{
+	font-size: 36px;
+}
+.otherinfo p{
+	font-size: 20px;
+	font-weight: bolder;
+	margin-top: 20px;
+}
+
+.topnav{
+	text-align: center;
+	margin-top: 20px;
+}
+.topnav .nav-item{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin-left: 5px;
+	margin-right: 5px;
+	position: relative;
+}
+
+.topnav .nav-item>i{
+	color: white;
+	font-size: 36px;
+
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+.topnav .nav-item>span{
+	display: none;
+}
+.topnav .nav-item:hover>i{
+	color: red;
+	transform: scale(1.4);
+	transition: all 1.5s;
+}
+
+.down-profile{
+	margin-top: 20px;
+}
+.down-profile a{
+	display: inline-block;
+	padding: 10px 30px;
+	border:2px solid white;
+	font-size: 16px;
+	color: white;
+}
+.down-profile a:hover{
+	border-color: black;
+	text-decoration: none;
+}
+
+
+/*background picture style*/
+.background-img {
+	width: 100%;
+	
+	min-height: 75vh;
+	
+	background-position: 50% 50% !important;
+	background-size:cover !important;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+}
+.about-img {
+	background-image: url(../resource/avatar.jpg);
+}
+.education-img {
+	background-image: url(../resource/education.jpg);
+}
+
+.experience-img {
+	background-image: url(../resource/work.jpg);
+}
+
+/*section:about me*/
+
+.about-thumb {
+	padding: 35px 20px 35px 20px;
+}
+
+
+/*section: skills*/
+/*圆环形技能进度条*/
+#skills .sec-title{
+	color: white;
+}
+.skill-panel .circle {
+	margin-right: auto;
+	margin-left: auto;
+}
+.skill-tip {
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+.circle{
+	width: 200px;
+	height: 200px;
+	position: relative;
+	border-radius: 50%;
+	background-color: #0cc;
+}
+.pie_left,.pie_right{
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.right,.left{
+	display: block;
+	width: 200px;
+	height:200px;
+	background-color: #00aacc;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.pie_right,.right{
+	clip:rect(0, auto, auto, 100px);
+}
+.pie_left,.left{
+	clip: rect(0, 100px, auto, 0);
+}
+
+.mark{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	left: 25px;
+	top: 25px;
+	background-color: #fff;
+	position: absolute;
+	text-align: center;
+	line-height: 150px;
+	font-size: 16px;
+}
+
+
+
+
+/*section:background*/
+.background-thumb {
+	padding: 35px 40px 35px 40px;
+}
+.section-title {
+	margin-bottom: 50px;
+}
+#bginfo .media {
+	margin-left: 15px;
+}
+.media-left .media-object {
+	font-size: 24px;
+	line-height: 24px;
+	margin-right: 15px;
+}
+.media-body h3 {
+	font-weight: 800;
+}
+.media-body small {
+	color: black;
+	font-weight: 600;
+}
+.media-body p {
+	margin-top: 15px;
+}
+
+
+/*section: works and project*/
+#works{
+	background-color: ;
+	background-attachment: scroll;
+	background-size: cover;
+}
+#works .sec-title{
+	color: white;
+}
+.demo{
+	position: relative;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+.demo>.scanView{
+	width: 100%;
+	max-height: 150px;
+	overflow: hidden;
+}
+.scanView>img {
+
+}
+.demo>p{
+	width: 100%;
+	height: 50px;
+	color: black;
+	background-color: white;
+}
+.demo:hover>p{
+	background-color: #0cc;
+}
+/*section: contact methods*/
+#contact {
+
+	background-color: green;
+}
+.contactMethods {
+	margin-left: auto;
+	margin-right: auto;
+}
+.contact-methods {
+	margin:10px auto;
+}
+.contact-methods ul {
+	list-style: none;
+}
+.contact-methods li {
+	margin-bottom: 20px;
+	margin-top: 15px;
+	
+	font-size: 20px;
+
+}
+.twoCode {
+	width: 200px;
+	height: 200px;
+
+	margin:20px auto 30px auto;
+}
+/*section: footer copyright*/
+
+#foot {
+	padding:10px 0;
+	color: white;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	background-color: black;
+}
+
+
