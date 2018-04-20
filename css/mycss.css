@@ -5,17 +5,21 @@ html,body{
 }
 
 	/*background-color*/
+
 .bg-red {
 	background-color: red;
 }
 .bg-black {
-	background-color: #161616;
+	background-color: #323232;
 }
 .bg-orange {
 	background-color: #E9724C;
 }
 .bg-yellow { 
 	background-color: #E3AE57;
+}
+.bg-white {
+	background-color: #F2F2F2;
 }
 	/*font color design*/
 .color-white {
@@ -37,12 +41,20 @@ html,body{
 .modal-footer {
 	text-align: center !important;
 }
+.navbar {
+	border-radius: 0px !important;
+}
 
 
 
 /* style design*/
+#basicInfo,#aboutMe,#bginfo,#skills,#works,#contact{
+	position: relative;
+	margin-bottom: 2px;
+}
+
 #aboutMe .about-thumb,
-#aboutMe .whsh-thumb,
+#aboutMe .wish-thumb,
 #bginfo .education-thumb,
 #bginfo .experience-thumb,
 #skill .skill-thumb {
@@ -55,24 +67,29 @@ html,body{
 #bginfo .col-md-6,#bginfo .col-sm-12,
 #contact .col-md-6,#contact .col-sm-12
 {
-	padding: 0;
+	/*padding: 0;*/
+}
+
+.screen-title-line {
+	border-top: 1px solid #d5dfe7;
+	padding-top: 20px;
+	width: 160px;
+}
+.s2-title-line,
+.s4-title-line,
+.s5-title-line {
+	margin: 20px auto;
 }
 
 
-
-#basicInfo,#aboutMe,#bginfo,#skills,#works,#contact{
-	position: relative;
+.content-title {
+	margin-bottom: 35px;
+}
+.content-title > h2 {
+	font-size: 40px;
+	font-weight: bolder;
 }
 
-#aboutMe{
-	background-color: white;
-}
-#bginfo{
-	background-color: #ffffff;
-}
-#skills{
-	background-color: #1abc9c;
-}
 #basicInfo:before,
 #aboutMe:before,
 #skills:before,
@@ -82,42 +99,32 @@ html,body{
 	display: table;
 	content: " ";
 }
+
 /*section:topbar*/
-.top-navbar {
-	padding: 10px 0;
-}
 .top-navbar .navbar-brand {
-	color:black;
+	color:white;
 	font-size: 24px;
 	font-weight: 700;
 }
-.top-navbar .navbar-collapse-1 a:hover {
-	background-color: white ;
+.top-navbar .navbar-brand:hover {
+	opacity: .65;
 }
-
-
-.navbar-collapse-1 a {
-	color: white;
+.nav > li > a:focus,
+.nav > li > a:hover {
+	background-color: transparent !important;
+}
+.navbar-menu a {
 	font-size: 18px;
+	color: white;
 }
-.navbar-collapse-1 a:visited,
-.navbar-collpase-1 a:active,
-.navbar-collapse-1 a:hover {
-	color: black;
-} 
-
-.top-navbar-collapse {
-	background-color: white;
-}
-.top-navbar-collapse a,
-.top-navbar-collapse .navbar-brand {
-	color: black;
+.navbar-menu a:hover {
+	opacity: .65;
 }
 
 /*section: header*/
 #head{
 	height: 100%; /* 500% */
-	background-image: url(../resource/banner.jpg);
+	background-color: white;
 }
 #header:before{
 	display: tabel;
@@ -132,27 +139,27 @@ html,body{
 	margin:200px auto auto auto;
 }
 .myimg>img{
-	box-sizing: border-box;
+	/*box-sizing: border-box;*/
 	max-width: 200px;
 	
-	border:2px solid white;
+	border:1px solid black;
 	border-radius: 50%;
 	overflow: hidden;
 
 }
 
 .otherinfo{
-	color: white;
+	color: black;
 }
 .otherinfo h2{
 	font-size: 36px;
+	font-weight: bolder;
 }
 .otherinfo p{
 	font-size: 20px;
 	font-weight: bolder;
 	margin-top: 20px;
 }
-
 .topnav{
 	text-align: center;
 	margin-top: 20px;
@@ -189,12 +196,14 @@ html,body{
 .down-profile a{
 	display: inline-block;
 	padding: 10px 30px;
-	border:2px solid white;
+	border:2px solid black;
+	border-radius: 10px;
 	font-size: 16px;
-	color: white;
+	color: black;
 }
 .down-profile a:hover{
-	border-color: black;
+	background-color: gray;
+	border-color: gray;
 	text-decoration: none;
 }
 
@@ -228,16 +237,22 @@ html,body{
 
 /*section:about me*/
 
-.about-thumb {
-	padding: 35px 20px 35px 20px;
+.section-title {
+	margin: 20px auto;
 }
-
-
+.section-title > h2 {
+	color: black;
+	font-size: 40px;
+	font-weight: bolder;
+}
+@media screen and (max-width: 767px) {
+	.section-title > h2,
+	.section-title > h4 {
+		text-align: center;
+	}
+}
 /*section: skills*/
 /*圆环形技能进度条*/
-#skills .sec-title{
-	color: white;
-}
 .skill-panel .circle {
 	margin-right: auto;
 	margin-left: auto;
@@ -292,16 +307,15 @@ html,body{
 	line-height: 150px;
 	font-size: 16px;
 }
-
+.skill-panel > .skill-tip {
+	margin-bottom: 30px;
+}
 
 
 
 /*section:background*/
 .background-thumb {
 	padding: 35px 40px 35px 40px;
-}
-.section-title {
-	margin-bottom: 50px;
 }
 #bginfo .media {
 	margin-left: 15px;
@@ -321,7 +335,17 @@ html,body{
 .media-body p {
 	margin-top: 15px;
 }
-
+@media screen and (max-width: 767px) {
+	.education-thumb > .media,
+	.experience-thumb > .media, {
+		margin-left: 30px;
+	}
+	.education-thumb > .screen-title-line,
+	.experience-thumb > .screen-title-line {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
 
 /*section: works and project*/
 #works{
@@ -356,10 +380,6 @@ html,body{
 	background-color: #0cc;
 }
 /*section: contact methods*/
-#contact {
-
-	background-color: green;
-}
 .contactMethods {
 	margin-left: auto;
 	margin-right: auto;
@@ -387,10 +407,12 @@ html,body{
 
 #foot {
 	padding:10px 0;
-	color: white;
+	color: black;
 	font-size: 16px;
 	font-family: "微软雅黑";
-	background-color: black;
+	border-top: 1px solid #eee;
 }
+
+
 
 

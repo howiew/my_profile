@@ -4,15 +4,23 @@ $(function(){
 	//set default options
 
 	//s2
-	$('#aboutMe').find('.about-thumb').css({
-		"margin-left":"-150px",
+	$('#aboutMe').find('.about-thumb > .section-title').css({
+		"margin-top":"-50px",
 		"opacity":"0"
-	}).hide();
+	});
+	$('#aboutMe').find('.about-thumb > .section-content').css({
+		"margin-bottom":"-50px",
+		"opacity":"0"
+	});
 
-	$('#aboutMe').find('.wish-thumb').css({
-		"margin-right":"-150px",
+	$('#aboutMe').find('.wish-thumb > .section-title').css({
+		"margin-top":"-50px",
 		"opacity":"0"
-	}).hide();
+	});
+	$('#aboutMe').find('.wish-thumb > .section-content').css({
+		"margin-bottom":"-50px",
+		"opacity":"0"
+	});
 
 	$("#s1,#s2,#s3,#s4").css({
 		"opacity":"0"
@@ -22,10 +30,10 @@ $(function(){
 
 	$('#bginfo').find('.education-thumb').css({
 		'opacity':0,
-		'margin-left':'-150px'
+		'margin-top':'-50px'
 	}).hide();
 	$('#bginfo').find('.experience-thumb').css({
-		'margin-right':'-150px',
+		'margin-top':'-50px',
 		'opacity':'0'
 	}).hide();
 
@@ -102,19 +110,29 @@ var scrollSet = function(){
 	//个人介绍区域
 
 	if(windowScrollTop >= ($('#aboutMe').offset().top - screenScrollTop + 50) && $('#aboutMe').data('animate') == 0){
-		$('#aboutMe').find('.about-thumb').
+		$('#aboutMe').find('.about-thumb > .section-title').
 			animate({
-				"margin-left":"0px",
+				"margin-top":"0px",
 				"opacity":"1"
-			},1000).
-			show();
+			},1000);
 
-		$('#aboutMe').find('.wish-thumb').
+		$('#aboutMe').find('.wish-thumb > .section-title').
 			animate({
-				"margin-right":"0px",
+				"margin-top":"0px",
 				"opacity":"1"
-			},1000).
-			show();
+			},1000);
+
+		$('#aboutMe').find('.about-thumb > .section-content').
+			animate({
+				"margin-bottom":"0px",
+				"opacity":"1"
+			},1000);
+
+		$('#aboutMe').find('.wish-thumb > .section-content').
+			animate({
+				"margin-bottom":"0px",
+				"opacity":"1"
+			},1000);
 
 		$('#aboutMe').data('animate',1);
 		console.log("当前区域:s2");
@@ -145,21 +163,24 @@ var scrollSet = function(){
 		setTimeout(function(){
 			setCircleAnimate("#s4")
 		},1050);
+
+		console.log("当前区域:s3");
 	}
 	if(windowScrollTop >= ($("#bginfo").offset().top-screenScrollTop + 250) && $('#bginfo').data('animate') == 0){
 
 
 		$('#bginfo').find('.education-thumb').animate({
 		'opacity':1,
-		'margin-left':'0px'
+		'margin-top':'0px'
 		},1000).show();
 
 		$('#bginfo').find('.experience-thumb').animate({
-			'margin-right':'0px',
+			'margin-top':'0px',
 			'opacity':1
 		},1000).show();
 
 		$('#bginfo').data('animate',1);
+		console.log("当前区域:s4");
 	}
 
 }
